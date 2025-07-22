@@ -38,22 +38,28 @@ MiniBMS is a Simulink model designed to simulate a simple battery management sys
 
 The BMS starts in IDLE mode.           
 
+![image alt](Idle.PNG)
 
 ### Discharge Mode
 
 If the ignition is switched on and there are no faults, the BMS transitions to DISCHARGE mode.
 
+![image alt](Discharge.PNG)
 
 ### Fault During Discharge
 
 If a fault occurs during discharge, the BMS reverts to IDLE mode. It won't restart until the fault is resolved and the ignition is switched off and then on.
 During discharge if there is a fault the BMS falls back to IDLE mode and won't restart until the fault is healed and the ignition is switched off and then on.
 
+![image alt](DischargeFault.PNG)
 
 ### Charge Mode
 When the charge plug is connected, the BMS transitions to CHARGE mode, even if the ignition is on. Ensure the current value is set to negative; otherwise, the battery will discharge.
 
+![image alt](Charge.PNG)
 
 ### Fault During Charge
 If a fault occurs during charging, the BMS stops operation. It will only resume if the fault is resolved and the plug is reconnected.
+
+![image alt](ChargeFault.PNG)
 
